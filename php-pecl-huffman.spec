@@ -1,15 +1,15 @@
 %define		_modname	huffman
-%define		_status		beta
+%define		_status		stable
 
 Summary:	%{_modname} - lossless compression algorithm
 Summary(pl):	%{_modname} - bezstratny algorytm kompresji
 Name:		php-pecl-%{_modname}
-Version:	0.1.0
+Version:	0.2.0
 Release:	1
 License:	PHP
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{_modname}-%{version}.tgz
-# Source0-md5:	2b20c8bdf2209f7758f65576bdf923c5
+# Source0-md5:	e920b06610fb3b6ad1d79dc910962dc3
 URL:		http://pecl.php.net/package/huffman/
 BuildRequires:	libtool
 BuildRequires:	php-devel >= 3:5.0.0
