@@ -31,12 +31,12 @@ bit sequence.
 In PECL status of this extension is: %{_status}.
 
 %description -l pl
-Kompresja huffmana nale¿y do grupy algorytmów o zmiennej d³ugo¶ci
-klucza. To oznacza ¿e pojedyncze symbole (np. znaki w pliku tekstowym)
-s± zastêpowane sekwencjami bitów o znanej d³ugo¶ci. W ten sposób
-symbole, które czêsto pojawiaj± siê w pliku s± zastêpowane krótsz±
-sekwencj± podczas gdy inne, rzadziej u¿ywane otrzymuj± d³u¿sz±
-sekwencjê bitow±.
+Kompresja Huffmana nale¿y do grupy algorytmów o zmiennej d³ugo¶ci
+klucza. To oznacza, ¿e pojedyncze symbole (np. znaki w pliku
+tekstowym) s± zastêpowane sekwencjami bitów o ró¿nej d³ugo¶ci. W ten
+sposób symbole, które czêsto pojawiaj± siê w pliku, s± zastêpowane
+krótsz± sekwencj±, podczas gdy inne, rzadziej u¿ywane, otrzymuj±
+d³u¿sz± sekwencjê bitow±.
 
 To rozszerzenie ma w PECL status: %{_status}.
 
