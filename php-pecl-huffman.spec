@@ -11,7 +11,6 @@ Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{_modname}-%{version}.tgz
 # Source0-md5:	e920b06610fb3b6ad1d79dc910962dc3
 URL:		http://pecl.php.net/package/huffman/
-BuildRequires:	libtool
 BuildRequires:	php-devel >= 3:5.0.0
 Requires:	php-common >= 3:5.0.0
 Obsoletes:	php-pear-%{_modname}
