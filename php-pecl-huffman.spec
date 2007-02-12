@@ -1,7 +1,7 @@
 %define		_modname	huffman
 %define		_status		stable
 Summary:	%{_modname} - lossless compression algorithm
-Summary(pl.UTF-8):   %{_modname} - bezstratny algorytm kompresji
+Summary(pl.UTF-8):	%{_modname} - bezstratny algorytm kompresji
 Name:		php-pecl-%{_modname}
 Version:	0.2.0
 Release:	6
