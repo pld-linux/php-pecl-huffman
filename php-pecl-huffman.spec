@@ -1,7 +1,7 @@
 %define		_modname	huffman
 %define		_status		stable
 Summary:	%{_modname} - lossless compression algorithm
-Summary(pl):	%{_modname} - bezstratny algorytm kompresji
+Summary(pl.UTF-8):   %{_modname} - bezstratny algorytm kompresji
 Name:		php-pecl-%{_modname}
 Version:	0.2.0
 Release:	6
@@ -27,13 +27,13 @@ bit sequence.
 
 In PECL status of this extension is: %{_status}.
 
-%description -l pl
-Kompresja Huffmana nale¿y do grupy algorytmów o zmiennej d³ugo¶ci
-klucza. To oznacza, ¿e pojedyncze symbole (np. znaki w pliku
-tekstowym) s± zastêpowane sekwencjami bitów o ró¿nej d³ugo¶ci. W ten
-sposób symbole, które czêsto pojawiaj± siê w pliku, s± zastêpowane
-krótsz± sekwencj±, podczas gdy inne, rzadziej u¿ywane, otrzymuj±
-d³u¿sz± sekwencjê bitow±.
+%description -l pl.UTF-8
+Kompresja Huffmana naleÅ¼y do grupy algorytmÃ³w o zmiennej dÅ‚ugoÅ›ci
+klucza. To oznacza, Å¼e pojedyncze symbole (np. znaki w pliku
+tekstowym) sÄ… zastÄ™powane sekwencjami bitÃ³w o rÃ³Å¼nej dÅ‚ugoÅ›ci. W ten
+sposÃ³b symbole, ktÃ³re czÄ™sto pojawiajÄ… siÄ™ w pliku, sÄ… zastÄ™powane
+krÃ³tszÄ… sekwencjÄ…, podczas gdy inne, rzadziej uÅ¼ywane, otrzymujÄ…
+dÅ‚uÅ¼szÄ… sekwencjÄ™ bitowÄ….
 
 To rozszerzenie ma w PECL status: %{_status}.
 
