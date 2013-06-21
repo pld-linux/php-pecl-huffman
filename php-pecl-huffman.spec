@@ -1,20 +1,21 @@
-%define		_modname	huffman
-%define		_status		stable
-Summary:	%{_modname} - lossless compression algorithm
-Summary(pl.UTF-8):	%{_modname} - bezstratny algorytm kompresji
-Name:		php-pecl-%{_modname}
+%define		php_name	php%{?php_suffix}
+%define		modname	huffman
+%define		status		stable
+Summary:	%{modname} - lossless compression algorithm
+Summary(pl.UTF-8):	%{modname} - bezstratny algorytm kompresji
+Name:		%{php_name}-pecl-%{modname}
 Version:	0.2.0
 Release:	7
 License:	PHP
 Group:		Development/Languages/PHP
-Source0:	http://pecl.php.net/get/%{_modname}-%{version}.tgz
+Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
 # Source0-md5:	e920b06610fb3b6ad1d79dc910962dc3
 URL:		http://pecl.php.net/package/huffman/
-BuildRequires:	php-devel >= 3:5.0.0
-BuildRequires:	rpmbuild(macros) >= 1.344
+BuildRequires:	%{php_name}-devel >= 3:5.0.0
+BuildRequires:	rpmbuild(macros) >= 1.650
 %{?requires_php_extension}
-Requires:	php-common >= 4:5.0.4
-Obsoletes:	php-pear-%{_modname}
+Requires:	php(core) >= 5.0.4
+Obsoletes:	php-pear-%{modname}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -25,7 +26,7 @@ that have a distinct length. So symbols that occur a lot in a file are
 given a short sequence while other that are used seldom get a longer
 bit sequence.
 
-In PECL status of this extension is: %{_status}.
+In PECL status of this extension is: %{status}.
 
 %description -l pl.UTF-8
 Kompresja Huffmana należy do grupy algorytmów o zmiennej długości
@@ -35,13 +36,13 @@ sposób symbole, które często pojawiają się w pliku, są zastępowane
 krótszą sekwencją, podczas gdy inne, rzadziej używane, otrzymują
 dłuższą sekwencję bitową.
 
-To rozszerzenie ma w PECL status: %{_status}.
+To rozszerzenie ma w PECL status: %{status}.
 
 %prep
-%setup -q -c
+%setup -qc
+mv %{modname}-%{version}/* .
 
 %build
-cd %{_modname}-%{version}
 phpize
 %configure
 %{__make}
@@ -50,10 +51,10 @@ phpize
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{php_sysconfdir}/conf.d,%{php_extensiondir}}
 
-install %{_modname}-%{version}/modules/%{_modname}.so $RPM_BUILD_ROOT%{php_extensiondir}
-cat <<'EOF' > $RPM_BUILD_ROOT%{php_sysconfdir}/conf.d/%{_modname}.ini
-; Enable %{_modname} extension module
-extension=%{_modname}.so
+install -p modules/%{modname}.so $RPM_BUILD_ROOT%{php_extensiondir}
+cat <<'EOF' > $RPM_BUILD_ROOT%{php_sysconfdir}/conf.d/%{modname}.ini
+; Enable %{modname} extension module
+extension=%{modname}.so
 EOF
 
 %clean
@@ -69,6 +70,6 @@ fi
 
 %files
 %defattr(644,root,root,755)
-%doc %{_modname}-%{version}/{CREDITS,README}
-%config(noreplace) %verify(not md5 mtime size) %{php_sysconfdir}/conf.d/%{_modname}.ini
-%attr(755,root,root) %{php_extensiondir}/%{_modname}.so
+%doc CREDITS README
+%config(noreplace) %verify(not md5 mtime size) %{php_sysconfdir}/conf.d/%{modname}.ini
+%attr(755,root,root) %{php_extensiondir}/%{modname}.so
