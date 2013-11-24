@@ -5,7 +5,7 @@ Summary:	%{modname} - lossless compression algorithm
 Summary(pl.UTF-8):	%{modname} - bezstratny algorytm kompresji
 Name:		%{php_name}-pecl-%{modname}
 Version:	0.2.0
-Release:	7
+Release:	8
 License:	PHP
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
